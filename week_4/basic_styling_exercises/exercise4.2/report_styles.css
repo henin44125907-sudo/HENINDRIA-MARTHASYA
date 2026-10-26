@@ -1,0 +1,77 @@
+/* ===== Element Selectors ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+
+/* ===== Border for table and cells ===== */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* ===== Descendant Selector: padding for all table cells ===== */
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Default style for all tables (Cash Movement Table) */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+    background-color: #007bff; /* Blue header for the cash movement table */
+    color: white;
+}
+
+/* ===== ID Selector: General Journal Table ===== */
+#general-journal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#general-journal-table thead {
+    background-color: #f2f2f2; /* Different background color for thead */
+    color: #333;
+}
+
+#general-journal-table caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* ===== Class Selector ===== */
+.highlight-row {
+    background-color: #ffffcc; /* Light yellow for total rows */
+    font-weight: bold;
+}
+
+/* ===== Number columns aligned to the right ===== */
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: right;
+}
+
+/* .amount covers rows with rowspan/colspan, where nth-child no longer matches */
+.amount {
+    text-align: right;
+}
