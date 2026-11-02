@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Performance Dashboard - Nusantara Tax Consulting Office</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="brand">Nusantara Tax Consulting Office</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Financial Reports</a></li>
+                <li><a href="#">Data Input</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Reports</h2>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#income-statement">Income Statement</a></li>
+            <li><a href="#balance-sheet">Balance Sheet</a></li>
+            <li><a href="#cash-flow">Cash Flow</a></li>
+            <li><a href="#transaction-recording">Transaction Recording</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="summary">
+            <h2>Financial Summary, Q1 2025</h2>
+            <div class="summary-cards">
+                <article class="card">
+                    <h3>Total Revenue</h3>
+                    <p class="value">IDR 45,000,000</p>
+                </article>
+                <article class="card">
+                    <h3>Total Expenses</h3>
+                    <p class="value negative">IDR 29,570,000</p>
+                </article>
+                <article class="card">
+                    <h3>Net Profit</h3>
+                    <p class="value">IDR 15,430,000</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="expenses-by-category">
+            <h2>Expenses by Category</h2>
+            <div class="table-wrapper">
+                <table>
+                    <caption>Operating expenses, January to March 2025</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Expense Category</th>
+                            <th scope="col">January (IDR)</th>
+                            <th scope="col">February (IDR)</th>
+                            <th scope="col">March (IDR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Salaries</th>
+                            <td>6,500,000</td>
+                            <td>6,500,000</td>
+                            <td>6,750,000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rent</th>
+                            <td>2,000,000</td>
+                            <td>2,000,000</td>
+                            <td>2,000,000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Utilities</th>
+                            <td>850,000</td>
+                            <td>910,000</td>
+                            <td>875,000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Office Supplies</th>
+                            <td>400,000</td>
+                            <td>325,000</td>
+                            <td>460,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td>9,750,000</td>
+                            <td>9,735,000</td>
+                            <td>10,085,000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="transaction-recording">
+            <h2>Record Expense</h2>
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Expense Details</legend>
+                    <p>
+                        <label for="expenseDate">Date:</label>
+                        <input type="date" id="expenseDate" name="expenseDate" required>
+                    </p>
+                    <p>
+                        <label for="expenseCategory">Category:</label>
+                        <select id="expenseCategory" name="expenseCategory" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Salaries">Salaries</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="OfficeSupplies">Office Supplies</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="expenseAmount">Amount (IDR):</label>
+                        <input type="number" id="expenseAmount" name="expenseAmount"
+                               min="0" step="1000" required placeholder="Example: 500000">
+                    </p>
+                    <p>
+                        <label for="expenseNote">Description:</label>
+                        <input type="text" id="expenseNote" name="expenseNote"
+                               placeholder="Example: Printer paper and toner">
+                    </p>
+                </fieldset>
+                <p>
+                    <input type="submit" value="Save Expense">
+                    <input type="reset" value="Reset Form">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nusantara Tax Consulting Office. Created by [Your Name] - [Your NIM] for Basic Programming course.</p>
+    </footer>
+
+</body>
+</html>
